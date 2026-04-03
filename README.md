@@ -64,7 +64,7 @@ DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPasc
 
 - **Derek Pascarella (ateam)**
   - Reverse engineering, SH4 assembly patching, controller input implementation, OSD/texture edits, build tooling, testing.
-- **Chris Daiglou (dreammods)**
+- **Chris Daioglou (dreammods)**
   - Custom Maple bus decoder that provided critical early clues about the dongle's communication protocol.
 
 ---
