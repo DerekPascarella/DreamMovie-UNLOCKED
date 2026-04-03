@@ -280,8 +280,8 @@ The IR remote has 13 functional buttons (excluding PBC, which is dead code in th
 |---|---|
 | **D-Pad Up** | Volume up, menu navigation |
 | **D-Pad Down** | Volume down, menu navigation |
-| **D-Pad Left** | Shift audio balance to the left, menu navigation |
-| **D-Pad Right** | Shift audio balance to the right, menu navigation | 
+| **D-Pad Left** | Shift audio balance to the left, menu navigation, confirm |
+| **D-Pad Right** | Shift audio balance to the right, menu navigation, confirm | 
 | **A** | Pause / Play |
 | **B** | Mute |
 | **X** | Sound channel toggle |
@@ -289,8 +289,8 @@ The IR remote has 13 functional buttons (excluding PBC, which is dead code in th
 | **Start** | Track selection menu |
 | **L Trigger** | Previous track |
 | **R Trigger** | Next track |
-| **Analog Left** | Rewind (press once or hold) |
-| **Analog Right** | Fast-forward (press once or hold) |
+| **Analog Left** | Rewind (press or hold) |
+| **Analog Right** | Fast-forward (press or hold) |
 
 ### Writing a Maple Bus Protocol Swap in 138 Bytes
 
