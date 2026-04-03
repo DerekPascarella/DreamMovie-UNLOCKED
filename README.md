@@ -47,7 +47,7 @@ DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the Dre
 
 ## Current Version
 
-DreamMovie "UNLOCKED" is currently at version [1.0](xxxx).
+DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases/download/1.0/DreamMovie.UNLOCKED.v1.0.cdi).
 
 ## Changelog
 
@@ -72,7 +72,7 @@ Users must connect their controller in Port A for DreamMovie to recognize it (se
 
 ### Burning to Disc
 
-1. Download the [latest release CDI](xxx).
+1. Download the [latest release CDI](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases).
 2. Burn to CD-R with software like DiscJuggler, ImgBurn, or similar.
 3. Boot Dreamcast console with DreamMovie UNLOCKED disc in GD-ROM drive.
 4. Swap in VCD disc at the title screen.
@@ -81,7 +81,7 @@ Users must connect their controller in Port A for DreamMovie to recognize it (se
 
 GDEMU users are encouraged to use my [openMenu Virtual Folder Bundle](https://github.com/DerekPascarella/openMenu-Virtual-Folder-Bundle) package. Accordingly, the instructions below are written with that package in mind.
 
-1. Download the [latest release CDI](xxx).
+1. Download the [latest release CDI](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases).
 2. Add the CDI to your GDEMU SD card using GD MENU Card Manager.
 3. Add one or more VCD disc images to your SD card sequentially after DreamMovie (e.g., if DreamMovie is in slot `23`, place your first VCD disc in slot `24`). Note that as of version 1.5.2, GD MENU Card Manager will automatically convert any CUE-based disc images to a GDEMU-compatible format.
 4. Ensure that the Title and Serial values for DreamMovie plus subsequent VCD discs are identical.
@@ -93,7 +93,7 @@ Note that you can create as many of these DreamMovie plus VCD disc sets as desir
 
 ### Using an Optical Drive Emulator (MODE)
 
-1. Download the [latest release CDI](xxx).
+1. Download the [latest release CDI](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases).
 2. Create a folder on your MODE's storage device with the name of your choosing (e.g., "DreamMovie (UNLOCKED v1.0)") and copy the CDI into it.
 3. Copy any number of VCD discs to your MODE's storage device in the folder(s) of your choosing.
 4. Once booted to the MODE menu, place cursor over the DreamMovie entry and hold the A button.
