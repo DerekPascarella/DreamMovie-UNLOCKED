@@ -262,7 +262,7 @@ The actual software lives in `MSL.OUT`, a 472,076-byte binary loaded into Dreamc
 
 To find it, I used one of my common tricks: boot the game in an emulator that has a debugger, pause at some arbitrary moment during "this is the area I want to see" execution, then look at what instruction the debugger stopped on. From there, it's just a matter of finding what file contains the byte array representing that visible series of instructions.
 
-Ghidra handles SH4 disassembly pretty well here, especially after you figure out that `0x8c006800` is the base address for `MSL.OUT`. From there, it was a matter of finding the dongle check code, understanding how IR remote input reached the rest of the application, and figuring out how to replace the whole pipeline.
+With the real executable identified, Ghidra handles SH4 disassembly pretty well, especially after you figure out that `0x8c006800` is the base address for `MSL.OUT` (something I was able to calculate thanks to a debugger and its reported memory addresses for instructions). From there, it was a matter of finding the dongle check code, understanding how IR remote input reached the rest of the application, and figuring out how to replace the whole pipeline.
 
 ---
 
