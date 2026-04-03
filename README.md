@@ -258,7 +258,9 @@ In fact, I'm fairly confident that even `1ST_READ.BIN` itself is a decoy too (se
 
 ### Finding the Real Binary
 
-The actual software lives in `MSL.OUT`, a 472,076-byte binary loaded into Dreamcast RAM at address `0x8c006800`. It is a standard Katana SDK (not Windows CE) application, built with the SEGA development libraries and CRI Middleware. The file starts with an `SDRV` container header that embeds a copy of the ARM7 AICA sound driver (`manatee.drv`), followed by the SH4 executable code starting at file offset `0x9800` (which takes us to the typical base address of `0x8c010000`).
+The actual software lives in `MSL.OUT`, a 472,076-byte binary loaded into Dreamcast RAM at address `0x8c006800`. It's a standard Katana SDK (not Windows CE) application, built with the SEGA development libraries and CRI Middleware. The file starts with an `SDRV` container header that embeds a copy of the ARM7 AICA sound driver (`manatee.drv`), followed by the SH4 executable code starting at file offset `0x9800` (which takes us to the typical base address of `0x8c010000`).
+
+To find it, I used one of my common tricks: boot the game in an emulator that has a debugger, pause at some arbitrary moment during "this is the area I want to see" execution, then look at what instruction the debugger stopped on. From there, it's just a matter of finding what file contains the byte array representing that visible series of instructions.
 
 Ghidra handles SH4 disassembly pretty well here, especially after you figure out that `0x8c006800` is the base address for `MSL.OUT`. From there, it was a matter of finding the dongle check code, understanding how IR remote input reached the rest of the application, and figuring out how to replace the whole pipeline.
 
