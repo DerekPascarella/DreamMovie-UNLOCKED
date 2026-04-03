@@ -17,6 +17,7 @@ DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the Dre
   - [Burning to Disc](#burning-to-disc)
   - [Using an Optical Drive Emulator (GDEMU)](#using-an-optical-drive-emulator-gdemu)
   - [Using an Optical Drive Emulator (MODE)](#using-an-optical-drive-emulator-mode)
+- [MP3 Support Confusion](#mp3-support-confusion)
 - [A Personal Note](#a-personal-note)
 - [What is DreamMovie?](#what-is-dreammovie)
   - [The Hardware](#the-hardware)
@@ -66,6 +67,8 @@ DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPasc
 - **Chris Daiglou (dreammods)**
   - Custom Maple bus decoder that provided critical early clues about the dongle's communication protocol.
 
+---
+
 ## How to Use
 
 Users must connect their controller in Port A for DreamMovie to recognize it (see more in the [Writing a Maple Bus Protocol Swap in 138 Bytes](#writing-a-maple-bus-protocol-swap-in-138-bytes) section).
@@ -104,6 +107,22 @@ Note that you can create as many of these DreamMovie plus VCD disc sets as desir
 
 ---
 
+## MP3 Support Confusion
+
+Why am I confused? It's simply, really...
+
+As a kid, I am almost entirely confident I used DreamMovie to play MP3s burned to CD-Rs. The packaging itself touts MP3 support!
+
+However, no matter what I try, I can't get any basic CD-R containg one or more MP3s to be recognized, nor can I use any ODE with an ISO of said disc to be recognized either.
+
+Funny enough, one variant of the DreamMovie packaging (from BearCity) claims SVCD support, which is an outright lie. Does this mean MP3 support is a lie too and I hallucinated the entire childhood tune-rockin' memory?
+
+Maybe, but I don't think so...
+
+That being said, if you can't get your MP3 discs to work, don't feel too badly. More importantly though, if *you can* get one to work, please [reach out to me](https://dreamcastforever.com/?page=contact_information)!
+
+---
+
 ## A Personal Note
 
 I was twelve years old when I bought my DreamMovie unit. At the time, the Dreamcast was already fading from store shelves, but for a kid obsessed with imported media, the idea of turning a game console into a VCD player was irresistible. That purchase kicked off what became a lifelong obsession with collecting commercial VCD releases from all over the world.
@@ -118,7 +137,7 @@ This project started as a "wouldn't it be cool if" thought experiment and turned
 
 ### The Hardware
 
-<img align="right" width="300" src="https://github.com/DerekPascarella/DreamMovie-UNLOCKED/blob/main/title_screen.jpg?raw=true">DreamMovie is an unlicensed SEGA Dreamcast peripheral that turns the console into a VCD (Video CD) and MP3 player. It was released around 2001, sold through outlets like the now-defunct Lik-Sang online store, and for a while was all over eBay. The product was manufactured and distributed under various Chinese company brands, including BearCity and SRC, both of which were known for producing unlicensed console accessories and add-ons during that era.
+DreamMovie is an unlicensed SEGA Dreamcast peripheral that turns the console into a VCD (Video CD) and MP3 player. It was released around 2001, sold through outlets like the now-defunct Lik-Sang online store, and for a while was all over eBay. The product was manufactured and distributed under various Chinese company brands, including BearCity and SRC, both of which were known for producing unlicensed console accessories and add-ons during that era.
 
 The package included:
 - A proprietary IR receiver that plugs into any controller port
@@ -334,7 +353,7 @@ The old challenge generator body alone freed up 275 bytes of contiguous space. C
 
 ### The VMU Icon Problem
 
-<img align="right" width="200" src="https://github.com/DerekPascarella/DreamMovie-UNLOCKED/blob/main/vmu.jpg?raw=true"> With a standard controller connected, there is now typically a VMU sitting in its socket, staring blankly at the user. All Dreamcast software worth its salt displays a custom icon on the VMU's 48x32 monochrome LCD (except "Death Crimson 2", but I fixed that problem with my English translation patch too). DreamMovie, having been designed for an IR remote with no VMU, does nothing.
+With a standard controller connected, there is now typically a VMU sitting in its socket, staring blankly at the user. All Dreamcast software worth its salt displays a custom icon on the VMU's 48x32 monochrome LCD (except "Death Crimson 2", but I fixed that problem with my English translation patch too). DreamMovie, having been designed for an IR remote with no VMU, does nothing.
 
 The obvious solution would be to call `_pdVmsLcdWrite`, the standard SEGA PD (Peripheral Driver) library function for writing to VMU screens. The function exists in the binary (DreamMovie links the full PD library, v1.46). There is just one problem: the PD library was never initialized. Without initialization, the PD library's internal state structures are all zeroed out, its DMA ring is dormant, and calling any of its peripheral functions would crash.
 
