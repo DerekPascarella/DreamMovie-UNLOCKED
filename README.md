@@ -127,7 +127,7 @@ That being said, if you can't get your MP3 discs to work, don't feel too badly. 
 
 I was twelve years old when I bought my DreamMovie unit. At the time, the Dreamcast was already fading from store shelves, but for a kid obsessed with imported media, the idea of turning a game console into a VCD player was irresistible. That purchase kicked off what became a lifelong obsession with collecting commercial VCD releases from all over the world.
 
-Fast forward to 2026, and the DreamMovie hardware has become genuinely rare. The IR receiver dongles break, get lost, or simply never show up in the occasional eBay listing. The best VCD playback software the Dreamcast ever saw was locked behind a piece of proprietary plastic that fewer and fewer people still own.
+Fast forward to 2026, and the DreamMovie hardware has become incredibly rare. The IR receiver dongles break, get lost, or simply never show up in the occasional eBay listing. The best VCD playback software the Dreamcast ever saw was locked behind a piece of proprietary plastic that fewer and fewer people still own.
 
 This project started as a "wouldn't it be cool if" thought experiment and turned into untold hours of reverse engineering, SH4 assembly hacking, and more test builds than I care to count. The goal was simple: make DreamMovie work with a standard Dreamcast controller, so that anyone can use it.
 
