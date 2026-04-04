@@ -311,7 +311,7 @@ The IR remote has 13 functional buttons (excluding PBC, which is dead code in th
 | **D-Pad Right** | Shift audio balance to the right, menu navigation, confirm |
 | **A** | Pause / Play |
 | **B** | Mute |
-| **X** | Sound channel toggle |
+| **X** | Sound channel toggle for dual-language VCDs |
 | **Y** | Playback options menu |
 | **Start** | Track selection menu |
 | **L Trigger** | Previous track |
