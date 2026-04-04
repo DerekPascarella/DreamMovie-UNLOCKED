@@ -17,6 +17,7 @@ DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the Dre
   - [Burning to Disc](#burning-to-disc)
   - [Using an Optical Drive Emulator (GDEMU)](#using-an-optical-drive-emulator-gdemu)
   - [Using an Optical Drive Emulator (MODE)](#using-an-optical-drive-emulator-mode)
+  - [Using an Optical Drive Emulator (USB-GDROM)](#using-an-optical-drive-emulator-usb-gdrom)
 - [MP3 Support Confusion](#mp3-support-confusion)
 - [A Personal Note](#a-personal-note)
 - [What is DreamMovie?](#what-is-dreammovie)
@@ -40,7 +41,6 @@ DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the Dre
 - [Cleanup and Enhancements](#cleanup-and-enhancements)
   - [Fixing the "Engrish"](#fixing-the-engrish)
   - [Better Default Picture Settings](#better-default-picture-settings)
-  - [Title Screen Branding](#title-screen-branding)
 - [Building the Disc: The CDI Patching Pipeline](#building-the-disc-the-cdi-patching-pipeline)
 - [What DreamMovie Still Cannot Do](#what-dreammovie-still-cannot-do)
 
@@ -88,32 +88,52 @@ GDEMU users are encouraged to use my [openMenu Virtual Folder Bundle](https://gi
 2. Add the CDI to your GDEMU SD card using GD MENU Card Manager.
 3. Add one or more VCD disc images to your SD card sequentially after DreamMovie (e.g., if DreamMovie is in slot `23`, place your first VCD disc in slot `24`). Note that as of version 1.5.2, GD MENU Card Manager will automatically convert any CUE-based disc images to a GDEMU-compatible format.
 4. Ensure that the Title and Serial values for DreamMovie plus subsequent VCD discs are identical.
-5. Ensure that DreamMovie's disc number/count is `1/X`, where `X` represents the total number of discs. A typical two-disc VCD (e.g., "Metropolis"), for example, would start with DreamMovie as disc `1/3` using the Title value "Metropolis" and a custom Serial value like `VCDMETR`. The first VCD disc for the film would be marked as disc `2/3` and share the same Title and Serial values ("Metropolis" and `VCDMETR`, respectively), and so on.
+5. Ensure that DreamMovie's disc number/count is `1/X`, where `X` represents the total number of discs.
 6. Save your SD card.
 7. After launching the first disc (i.e., DreamMovie), press GDEMU's disc-swap button at the DreamMovie title screen to cycle to the first disc in the VCD set.
+8. If watching a multi-disc VCD and you're prompted to insert the next disc, press the GDEMU's disc-swap button to cycle to the next VCD disc.
 
-Note that you can create as many of these DreamMovie plus VCD disc sets as desired on your SD card. Simply repeat steps 3-5 for each.
+Note that you can create as many of these DreamMovie + VCD disc sets as desired on your SD card. Simply repeat steps 3-5 for each.
+
+If looking for a clear example, a typical two-disc VCD (e.g., "Metropolis") would start with DreamMovie as disc `1/3` using the Title value "Metropolis" and a custom Serial value like `VCDMETR`. The first VCD disc for the film would be marked as disc `2/3` and share the same Title and Serial values ("Metropolis" and `VCDMETR`, respectively), and so on.
+
+| Contents | Title | Disc Number | Serial |
+|---|---|---|---|
+| DreamMovie | Metropolis | 1/3 | VCDMETR |
+| Metropolis VCD (Disc 1) | Metropolis | 2/3 | VCDMETR |
+| Metropolis VCD (Disc 2) | Metropolis | 3/3 | VCDMETR |
 
 ### Using an Optical Drive Emulator (MODE)
 
 1. Download the [latest release CDI](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases).
 2. Create a folder on your MODE's storage device with the name of your choosing (e.g., "DreamMovie (UNLOCKED v1.0)") and copy the CDI into it.
-3. Copy any number of VCD discs to your MODE's storage device in the folder(s) of your choosing.
-4. Once booted to the MODE menu, place cursor over the DreamMovie entry and hold the A button.
+3. Copy any number of VCD discs to your MODE's storage device in the folder(s) of your choosing (e.g., folders named "Metropolis - Disc 1" and "Metropolis - Disc 2").
+4. Once booted to the MODE menu, place cursor over the DreamMovie disc and hold the A button.
 5. In the menu that appears, select "Add Disc to Queue."
 6. Place cursor over one or more VCD discs and add those to the queue as well.
 7. Once complete, hold the A button to bring up the same menu, then select "Launch Current Queue."
 8. After launching, press the MODE's disc-swap button at the DreamMovie title screen to cycle to the first disc in the VCD queue.
+9. If watching a multi-disc VCD and you're prompted to insert the next disc, press the MODE's disc-swap button to cycle to the next VCD disc in the queue.
+
+### Using an Optical Drive Emulator (USB-GDROM)
+
+1. Download the [latest release CDI](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases).
+2. Create a folder on your USB-GDROM's storage device with the name of your choosing (e.g., "DreamMovie (UNLOCKED v1.0)") and copy the CDI into it.
+3. Copy any number of VCD discs to your USB-GDROM's storage device in the folder(s) of your choosing (e.g., folders named "Metropolis - Disc 1" and "Metropolis - Disc 2").
+4. Once booted to the USB-GDROM menu, place cursor over the last VCD disc in the multi-disc set to be watched and press the X button. After that, place the cursor on the next to last disc in the set and press the X button. Repeat until you've cycled from the last disc to the first disc. If watching only a single-disc VCD, you only need to press the X button while cursor is on that disc.
+5. Place cursor over the DreamMovie entry and launch the queue by pressing the A button.
+6. At the DreamMovie title screen, open the drive lid and close it to cycle to the first VCD disc in the multi-disc set (or just the single-disc VCD) to be watched.
+7. If watching a multi-disc VCD and you're prompted to insert the next disc, open the drive lid and close it to cycle to the next VCD disc in the queue.
 
 ---
 
 ## MP3 Support Confusion
 
-Why am I confused? It's simply, really...
+Why am I confused? It's simple, really...
 
 As a kid, I am almost entirely confident I used DreamMovie to play MP3s burned to CD-Rs. The packaging itself touts MP3 support!
 
-However, no matter what I try, I can't get any basic CD-R containg one or more MP3s to be recognized, nor can I use any ODE with an ISO of said disc to be recognized either.
+However, no matter what I try, I can't get any basic CD-R containing one or more MP3s to be recognized, nor can I get an ISO of said disc to be recognized via any ODE either.
 
 Funny enough, one variant of the DreamMovie packaging (from BearCity) claims SVCD support, which is an outright lie. Does this mean MP3 support is a lie too and I hallucinated the entire childhood tune-rockin' memory?
 
@@ -205,7 +225,7 @@ In short, it's borderline insane that a $25 unlicensed media player for the Drea
 
 ### First Clues
 
-The first real breakthrough came from Chris Daiglou, who built a custom Maple bus decoder capable of capturing and analyzing the raw traffic between the Dreamcast and the dongle. His work made it possible to observe the challenge-response exchanges in flight and understand the communication pattern: the software was sending structured commands and expecting structured replies, not just polling for a device presence flag.
+The first real breakthrough came from Chris Daioglou, who built a custom Maple bus decoder capable of capturing and analyzing the raw traffic between the Dreamcast and the dongle. His work made it possible to observe the challenge-response exchanges in flight and understand the communication pattern: the software was sending structured commands and expecting structured replies, not just polling for a device presence flag.
 
 Armed with that knowledge, I turned to the disassembly.
 
@@ -281,7 +301,7 @@ The IR remote has 13 functional buttons (excluding PBC, which is dead code in th
 | **D-Pad Up** | Volume up, menu navigation |
 | **D-Pad Down** | Volume down, menu navigation |
 | **D-Pad Left** | Shift audio balance to the left, menu navigation, confirm |
-| **D-Pad Right** | Shift audio balance to the right, menu navigation, confirm | 
+| **D-Pad Right** | Shift audio balance to the right, menu navigation, confirm |
 | **A** | Pause / Play |
 | **B** | Mute |
 | **X** | Sound channel toggle |
@@ -376,7 +396,7 @@ The solution was to build a raw Maple DMA Block Write command by hand, embed it 
 
 The wrapper function in Cave 1 checks a one-shot flag byte (in Cave 2), and on the very first frame of execution, writes the DMA start address to the Maple DMA control register (`0xA05F6C04`), sets the trigger bit (`0xA05F6C18`), and clears the flag so it never fires again. One raw DMA transaction, no SDK functions, no library initialization. The icon appears on the VMU and stays there.
 
-Getting the command byte right was its own adventure. The initial implementation used command `0x0B` (Block Read). Seven failed test iterations later, I spoke with Chris who set me straight on some Maple protocol details that I was horribly misunderstanding: block Write is command `0x0C`, not `0x0B`! A one-digit mistake cost me hours of debugging.
+Getting the command byte right was its own adventure. The initial implementation used command `0x0B` (Block Read). Seven failed test iterations later, I spoke with Chris, who set me straight on some Maple protocol details that I was horribly misunderstanding: block Write is command `0x0C`, not `0x0B`! A one-digit mistake cost me hours of debugging.
 
 ### The Auto-Advance Saga
 
