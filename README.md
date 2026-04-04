@@ -499,9 +499,9 @@ Users can still adjust all of these through the OSD menus. The new defaults simp
 
 All of my attempts to rebuild the CDI disc image from scratch (extracting files, modifying them, remastering a new image) produced discs that would not boot. Whether this was due to additional protection mechanisms in the disc structure, subtle sector layout requirements, or something else entirely, the rebuilt images were simply not functional.
 
-I will say though that my high-level analysis of DreamMovie's `IP.BIN` reveals `1ST_READ.BIN` is likely also a decoy, and it has custom code to launch `MSL.OUT` in some way that I can't reproduce with my own standard `IP.BIN`.
+I will say though that my high-level analysis of DreamMovie's `IP.BIN` reveals `1ST_READ.BIN` is likely also a decoy, and it has custom code to launch `MSL.OUT` in some way that I can't reproduce with my own standard `IP.BIN`. To be fair though, I didn't try very hard.
 
-All of that said, good hacking to me *usually* means taking the path of least resistance. As such, the solution was to skip rebuilding the disc image entirely, and instead patch the original CDI image in-place. Four Python scripts handle the complete pipeline (available here in this repository for the curious):
+You see, good hacking to me *usually* means taking the path of least resistance. As such, the solution was to skip rebuilding the disc image entirely, and instead patch the original CDI image in-place. Four Python scripts handle the complete pipeline (available here in this repository for the curious):
 
 - **`1 - Patch MSL.OUT.py`** locates the `MSL.OUT` file inside the CDI, identifies the sector structure, and then replaces it with the patched version sector-by-sector. Sub-headers and EDC/ECC regions in each sector are left untouched at this stage.
 - **`2 - Patch LOGO.PVR.py`** finds the 524,320 byte `LOGO.PVR` texture in the CDI and replaces it in-place across 257 Mode 2 Form 1 sectors.
