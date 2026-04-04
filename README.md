@@ -78,7 +78,7 @@ Users must connect their controller in Port A for DreamMovie to recognize it (se
 
 For information on how the original IR remote has been mapped to a standard Dreamcast controller, see the [Controller Mapping](#controller-mapping) section.
 
-Note that when in the playback options menu (opened with the Y button), pressing either left or right on the D-Pad is used to confirm a selection. In the track selection menu, the A button is used to play a VCD track.
+Note that when in the playback options menu (opened with the Y button), pressing either left or right on the D-Pad is used to confirm a selection. In the track selection menu (opened with the Start button), the A button is used to play a VCD track.
 
 ### Burning to Disc
 
