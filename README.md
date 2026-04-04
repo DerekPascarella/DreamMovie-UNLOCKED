@@ -14,6 +14,7 @@ DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the Dre
 - [Changelog](#changelog)
 - [Credits](#credits)
 - [How to Use](#how-to-use)
+  - [Controls](#controls)
   - [Burning to Disc](#burning-to-disc)
   - [Using an Optical Drive Emulator (GDEMU)](#using-an-optical-drive-emulator-gdemu)
   - [Using an Optical Drive Emulator (MODE)](#using-an-optical-drive-emulator-mode)
@@ -32,7 +33,7 @@ DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the Dre
   - [A Disc Full of Red Herrings](#a-disc-full-of-red-herrings)
   - [Finding the Real Binary](#finding-the-real-binary)
 - [Teaching an Old Player New Tricks](#teaching-an-old-player-new-tricks)
-  - [The Controller Mapping](#the-controller-mapping)
+  - [Controller Mapping](#controller-mapping)
   - [Writing a Maple Bus Protocol Swap in 138 Bytes](#writing-a-maple-bus-protocol-swap-in-138-bytes)
 - [Going Deeper: Code Caves and SH4 Assembly](#going-deeper-code-caves-and-sh4-assembly)
   - [Where to Put New Code in a Binary You Cannot Recompile](#where-to-put-new-code-in-a-binary-you-cannot-recompile)
@@ -72,6 +73,12 @@ DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPasc
 ## How to Use
 
 Users must connect their controller in Port A for DreamMovie to recognize it (see more in the [Writing a Maple Bus Protocol Swap in 138 Bytes](#writing-a-maple-bus-protocol-swap-in-138-bytes) section).
+
+### Controls
+
+For information on how the original IR remote has been mapped to a standard Dreamcast controller, see the [Controller Mapping](#controller-mapping).
+
+Note that when in the playback options menu (opened with the Y button), pressing either left or right on the D-Pad is used to confirm a selection. In the track selection menu, the A button is used to play a VCD track.
 
 ### Burning to Disc
 
@@ -292,7 +299,7 @@ The core challenge was this: the DreamMovie binary has zero code for reading a s
 
 The solution was to replace the dongle communication with standard controller polling, and translate the controller's button format into the IR remote bitmask format that the rest of the application already understands. The application's button handler (`FUN_8c01553c`) dispatches on IR bitmask values through a large binary search tree. If we can produce the right bitmask values from a controller, the entire rest of the application works without (much) modification.
 
-### The Controller Mapping
+### Controller Mapping
 
 The IR remote has 13 functional buttons (excluding PBC, which is dead code in the firmware anyway). A standard Dreamcast controller has roughly 15 usable inputs: A, B, X, Y, Start, D-Pad (four directions), Analog stick (four directions), and L/R analog triggers. Plenty of room to map!
 
