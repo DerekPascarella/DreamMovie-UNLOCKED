@@ -53,7 +53,7 @@ DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPasc
 
 ## Changelog
 
-- **Version 1.0 (2026-04-XX)**
+- **Version 1.0 (2026-04-05)**
   - Initial public release.
   - Dongle check fully bypassed.
   - Standard Dreamcast controller support with complete button mapping.
@@ -64,7 +64,7 @@ DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPasc
 ## Credits
 
 - **Derek Pascarella (ateam)**
-  - Reverse engineering, SH4 assembly patching, controller input implementation, OSD/texture edits, build tooling, testing.
+  - Reverse engineering, SH4 assembly patching, controller input implementation, OSD/texture edits, tooling.
 - **Chris Daioglou (dreammods)**
   - Custom Maple bus decoder that provided critical early clues about the dongle's communication protocol.
 
