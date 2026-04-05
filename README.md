@@ -4,7 +4,7 @@
 
 **A patch to finally unlock the best VCD player the SEGA Dreamcast ever saw!**
 
-DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the DreamMovie VCD/MP3 player, replacing it with full standard Dreamcast controller support. For the first time, anyone with a Dreamcast can use this software without needing the original (and now extremely rare) hardware.
+DreamMovie "UNLOCKED" removes the proprietary IR dongle requirement from the DreamMovie VCD/MP3 player, replacing it with full standard Dreamcast controller support. For the first time, anyone with a Dreamcast can use this software without needing the original (and now extremely rare and expensive) hardware.
 
 ---
 
