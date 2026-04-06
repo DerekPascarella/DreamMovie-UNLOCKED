@@ -72,9 +72,9 @@ DreamMovie "UNLOCKED" is currently at version [1.0](https://github.com/DerekPasc
 
 ## How to Use
 
-Users must connect their controller in Port A for DreamMovie to recognize it (see more in the [Writing a Maple Bus Protocol Swap in 138 Bytes](#writing-a-maple-bus-protocol-swap-in-138-bytes) section).
-
 ### Controls
+
+Users must connect their controller in Port A for DreamMovie to recognize it (see more in the [Writing a Maple Bus Protocol Swap in 138 Bytes](#writing-a-maple-bus-protocol-swap-in-138-bytes) section).
 
 For information on how the original IR remote has been mapped to a standard Dreamcast controller, see the [Controller Mapping](#controller-mapping) section.
 
