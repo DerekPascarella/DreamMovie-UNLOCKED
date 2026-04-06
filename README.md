@@ -301,7 +301,7 @@ The solution was to replace the dongle communication with standard controller po
 
 ### Controller Mapping
 
-The IR remote has 13 functional buttons (excluding PBC, which is dead code in the firmware anyway). A standard Dreamcast controller has roughly 15 usable inputs: A, B, X, Y, Start, D-Pad (four directions), Analog stick (four directions), and L/R analog triggers. Plenty of room to map!
+The IR remote has 13 functional buttons (excluding PBC, which is dead code anyway). A standard Dreamcast controller has roughly 15 usable inputs: A, B, X, Y, Start, D-Pad (four directions), Analog stick (four directions), and L/R analog triggers. Plenty of room to map!
 
 | Controller | Remote Function |
 |---|---|
