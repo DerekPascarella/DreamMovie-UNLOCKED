@@ -403,7 +403,7 @@ The solution was to build a raw Maple DMA Block Write command by hand, embed it 
 
 The wrapper function in Cave 1 checks a one-shot flag byte (in Cave 2), and on the very first frame of execution, writes the DMA start address to the Maple DMA control register (`0xA05F6C04`), sets the trigger bit (`0xA05F6C18`), and clears the flag so it never fires again. One raw DMA transaction, no SDK functions, no library initialization. The icon appears on the VMU and stays there.
 
-Getting the command byte right was its own adventure. The initial implementation used command `0x0B` (Block Read). Seven failed test iterations later, I spoke with Chris, who set me straight on some Maple protocol details that I was horribly misunderstanding: block Write is command `0x0C`, not `0x0B`! A one-digit mistake cost me hours of debugging.
+Getting the command byte right was its own adventure. The initial implementation used command `0x0B` (Block Read). Seven failed test iterations later, I spoke with Chris, who set me straight on some Maple protocol details that I was horribly misunderstanding: Block Write is command `0x0C`, not `0x0B`! A one-digit mistake cost me hours of debugging.
 
 ### The Auto-Advance Saga
 
