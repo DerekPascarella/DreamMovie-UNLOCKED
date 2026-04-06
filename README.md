@@ -491,7 +491,7 @@ PBC (Playback Control) is a VCD feature for interactive menus. DreamMovie has a 
 
 DreamMovie ships with a "brightoft" (brightness offset) filter enabled by default at level 1 out of 14. This filter (which I renamed to "Picture black level") washes out black levels noticeably. The "UNLOCKED" patch changes the default from 1 to 0, disabling the filter. The result is deeper blacks and a more natural-looking picture out of the box.
 
-Users can still adjust all of these through the OSD menus. The new defaults simply provide a better starting point.
+Users can still adjust yjid through the OSD menus. The new default simply provides a better starting point.
 
 ---
 
