@@ -124,6 +124,8 @@ If looking for a clear example, a typical two-disc VCD (e.g., "Metropolis") woul
 
 ### Using an Optical Drive Emulator (USB-GDROM)
 
+Note that there is [a report](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/issues/2) that USB-GDROM won't boot the DreamMovie CDI. Unfortunately, I have no way of rebuilding the disc image (see the [Building the Disc: The CDI Patching Pipeline](https://github.com/DerekPascarella/DreamMovie-UNLOCKED?tab=readme-ov-file#building-the-disc-the-cdi-patching-pipeline) section) in an attempt to produce something the device plays nicely with, so support from its creator, MNEMO, is the only option for a path forward.
+
 1. Download the [latest release CDI](https://github.com/DerekPascarella/DreamMovie-UNLOCKED/releases).
 2. Create a folder on your USB-GDROM's storage device with the name of your choosing (e.g., "DreamMovie (UNLOCKED v1.0)") and copy the CDI into it.
 3. Copy any number of VCD discs to your USB-GDROM's storage device in the folder(s) of your choosing (e.g., folders named "Metropolis - Disc 1" and "Metropolis - Disc 2").
