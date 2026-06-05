@@ -279,7 +279,7 @@ Before even reaching the binary, the disc itself throws up some obstacles. The D
     └── WSEGACD.DLL
 ```
 
-See that `WINCE` directory full of DirectDraw, DirectSound, and Maple DLLs? See the `DCVCD.EXE` (a genuine Windows CE PE32 binary, by the way)? It all screams "this is a Windows CE application." A prospective reverse engineer would reasonably look at `DCVCD.EXE` first, load it into a disassembler expecting ARM or SH4 WinCE code, and end up chasing a dead end.
+See that `WINCE` directory full of DirectDraw, DirectSound, and Maple DLLs? See the `DCVCD.EXE` (a genuine Windows CE PE32 binary, by the way)? It all screams "this is a Windows CE application." A prospective reverse engineer would reasonably look at `DCVCD.EXE` first, load it into a disassembler expecting DreamMovie's SH4 WinCE code, and end up chasing a dead end.
 
 None of it is functional. The Windows CE files are decoys.
 
